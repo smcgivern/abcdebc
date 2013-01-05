@@ -1,7 +1,7 @@
 function replacer(guess) {
     return function(character) {
         var characterCode = character.toUpperCase().charCodeAt(0),
-            upperCase = (character == character.toUpperCase()),
+            upperCase = (character === character.toUpperCase()),
             result = (guess[characterCode - 65] || '');
 
         if (upperCase) { return result.toUpperCase(); }
