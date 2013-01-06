@@ -6,7 +6,7 @@ function replacer(guess) {
 
         if (upperCase) { return result.toUpperCase(); }
 
-        return result;
+        return result.toLowerCase();
     };
 }
 

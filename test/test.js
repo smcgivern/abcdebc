@@ -2,6 +2,10 @@ test('abcdebc() with correct guess', function() {
     equal('Hangman', abcdebc('Abcdebc', 'hangm'));
 });
 
+test('abcdebc() with correct guess in wrong case', function() {
+    equal('Hangman', abcdebc('Abcdebc', 'HANGM'));
+});
+
 test('abcdebc() with partial guess', function() {
     equal('Hanan', abcdebc('Abcdebc', 'han'));
 });
