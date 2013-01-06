@@ -18,5 +18,17 @@ test('abcdebc() with partial guess', function() {
 
 test('abcdebc() with no guess', function() {
     equal('', abcdebc('Abcdebc', ''));
-    equal("' ", abcdebc("A'bb cdeff", ''));
+    equal("' ", abcdebc("A'bb cdefgh", ''));
+});
+
+test('hangman()', function() {
+    equal('Abcdebc', hangman('Hangman'));
+});
+
+test('hangman() with punctuation', function() {
+    equal("A'bb cdefgh", hangman("I'll scream"));
+});
+
+test('hangman() with repeated letters', function() {
+    equal('Abccbde', hangman('Letters'));
 });
