@@ -1,3 +1,12 @@
+function uniqueLetters(string) {
+    return string
+        .toLowerCase()
+        .replace(/[^a-z]/g, '')
+        .replace(/./g, function(character, offset, string) {
+            return (offset === string.indexOf(character)) ? character : '';
+        });
+}
+
 function replacer(guess) {
     return function(character) {
         var characterCode = character.toUpperCase().charCodeAt(0),

@@ -1,3 +1,9 @@
+test('uniqueLetters()', function() {
+    equal('hangm', uniqueLetters('Hangman'));
+    equal('fobarzqux', uniqueLetters('Foo bar baz quux'));
+    equal('ilscream', uniqueLetters("I'll scream"));
+});
+
 test('abcdebc() with correct guess', function() {
     equal('Hangman', abcdebc('Abcdebc', 'hangm'));
 });
