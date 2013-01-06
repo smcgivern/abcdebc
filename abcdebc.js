@@ -25,6 +25,4 @@ function abcdebc(pattern, guess) {
     return pattern.replace(/[A-z]/g, replacer(guess));
 }
 
-function hangman(answer) {
-    return answer.replace(/[A-z]/g, replacer(false));
-}
+function hangman(answer) { return abcdebc(answer, false); }
