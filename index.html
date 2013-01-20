@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Abcdebc</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="sjcl.js" type="text/javascript"></script>
+    <script src="abcdebc.js" type="text/javascript"></script>
+    <script src="game.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1>Abcdebc</h1>
+    <noscript>
+      This is a game made with JavaScript. Without JS, it won&rsquo;t work.
+    </noscript>
+    <div id="game">
+      <p id="error" class="hidden">
+        Couldn&rsquo;t load game, please check that the address is correct.
+      </p>
+      <p id="remaining-letters" class="hidden">
+        <span id="letter-a">a</span>
+        <span id="letter-b">b</span>
+        <span id="letter-c">c</span>
+        <span id="letter-d">d</span>
+        <span id="letter-e">e</span>
+        <span id="letter-f">f</span>
+        <span id="letter-g">g</span>
+        <span id="letter-h">h</span>
+        <span id="letter-i">i</span>
+        <span id="letter-j">j</span>
+        <span id="letter-k">k</span>
+        <span id="letter-l">l</span>
+        <span id="letter-m">m</span>
+        <span id="letter-n">n</span>
+        <span id="letter-o">o</span>
+        <span id="letter-p">p</span>
+        <span id="letter-q">q</span>
+        <span id="letter-r">r</span>
+        <span id="letter-s">s</span>
+        <span id="letter-t">t</span>
+        <span id="letter-u">u</span>
+        <span id="letter-v">v</span>
+        <span id="letter-w">w</span>
+        <span id="letter-x">x</span>
+        <span id="letter-y">y</span>
+        <span id="letter-z">z</span>
+      </p>
+      <h2 id="word"></h2>
+      <p id="won-game" class="hidden">
+        That&rsquo;s right, well done! Create another game below and copy the
+        link to share it.
+      </p>
+      <p id="lost-game" class="hidden">
+        Incorrect answer. <span class="click" id="reload">Restart</span>?
+      </p>
+    </div>
+    <h2>Games</h2>
+    <p>
+      <form action="javascript:void(0);">
+        <input type="text" id="answer" size="30">
+        <input type="submit" id="create-game" value="Create game">
+      </form>
+      <span id="demo-games">Demo games: </span>
+    </p>
+    <h2>What is this?</h2>
+    <p>
+      The game
+      <a href="http://www.thefoolandhismoney.com/05-the-fool-and-his-money/">The
+      Fool and His Money</a> has a
+      <a href="http://tfahm.wikia.com/wiki/Lawley"
+         title="Lawley - The Fool and His Money Wiki">puzzle</a> near the
+      beginning where you are given a list of letters that make a sentence. The
+      order that you click on the letters determines where they go in the
+      sentence. I think of this as &lsquo;reverse hangman&rsquo;, because the
+      letters are already known. Unfortunately, although
+      <a href="http://www.rubyquiz.com/quiz130.html">opinions differ</a>
+      on <a href="http://www.reversehangman.com/">what exactly</a> reverse
+      hangman
+      <a href="http://www.smwcentral.net/?p=viewthread&amp;t=4391">is</a>, none
+      of them match the game I&rsquo;ve just described!
+    </p>
+    <p>
+      That&rsquo;s why I called this, a clone of the one found in The Fool and
+      His Money, Abcdebc. (It&rsquo;s the pattern of the letters in the word
+      hangman.) The source is available on GitHub at
+      <a href="https://github.com/smcgivern/abcdebc">smcgivern/abcdebc</a>.
+    </p>
+    <footer id="byline">
+      <p>By <a href="http://sean.mcgivern.me.uk/">Sean McGivern</a></p>
+    </footer>
+  </body>
+</html>

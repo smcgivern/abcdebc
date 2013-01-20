@@ -1,0 +1,41 @@
+body {
+    margin: 0em auto;
+    max-width: 50em;
+}
+
+.hidden { display: none; }
+
+#game { text-align: center; }
+
+h1 { font-size: 120%; }
+
+h2 { font-size: 100%; }
+
+input { font-size: larger; }
+
+form { display: inline; }
+
+#word, input {
+    font-family: "Palatino Linotype", "Palatino", "URW Palladio L", "Book Antiqua", "Baskerville", "Bitstream Charter", "Garamond", "Georgia", serif;
+}
+
+#word {
+    font-size: 400%;
+    margin-top: 0.5em;
+}
+
+#remaining-letters span, .click {
+    cursor: pointer;
+    font-size: larger;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+#remaining-letters span:hover, .click:hover {
+    border: 1px dashed #000;
+}
+
+#remaining-letters .guessed, #remaining-letters .guessed:hover {
+    border: 1px solid #fff;
+    cursor: auto;
+}
