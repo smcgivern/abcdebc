@@ -49,15 +49,3 @@ function encrypt(password, text, params) {
 function decrypt(password, text, params) {
     return sjcl.decrypt(password, sjcl.json.encode({'ct': text}), params);
 }
-
-function remainingLetters(skips) {
-    var letters = [];
-
-    for (var i = 0; i <= 25; i++) {
-        var letter = String.fromCharCode(i + 97);
-
-        if (skips.indexOf(letter) === -1) { letters.push(letter); }
-    };
-
-    return letters;
-}
