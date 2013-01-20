@@ -32,3 +32,11 @@ test('hangman() with punctuation', function() {
 test('hangman() with repeated letters', function() {
     equal('Abccbde', hangman('Letters'));
 });
+
+test('decrypt()', function() {
+    equal('Hangman', decrypt(sjclPassword, 'wc1R0lOf7kJ0uSGec0sd', sjclParams));
+});
+
+test('encrypt()', function() {
+    equal('wc1R0lOf7kJ0uSGec0sd', encrypt(sjclPassword, 'Hangman', sjclParams));
+});

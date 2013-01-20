@@ -1,3 +1,16 @@
+var sjclPassword = 'abcdebc',
+    sjclParams = {
+        'iv': 'GIll1hpIblEjYh1cse7DqQ',
+        'v': 1,
+        'iter': 1000,
+        'ks': 128,
+        'ts': 64,
+        'mode': 'ccm',
+        'adata': '',
+        'cipher': 'aes',
+        'salt': 'YVGHNC2Tu2M'
+    };
+
 function uniqueLetters(string) {
     return string
         .toLowerCase()
@@ -26,3 +39,13 @@ function abcdebc(pattern, guess) {
 }
 
 function hangman(answer) { return abcdebc(answer, false); }
+
+function encrypt(password, text, params) {
+    var decrypted = sjcl.json.decode(sjcl.encrypt(password, text, params));
+
+    return sjcl.codec.base64.fromBits(decrypted['ct'], 1);
+}
+
+function decrypt(password, text, params) {
+    return sjcl.decrypt(password, sjcl.json.encode({'ct': text}), params);
+}
