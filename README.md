@@ -1,8 +1,8 @@
-The game [The Fool and His Money][tfahm] hasa [puzzle][lawley] near the
+The game [The Fool and His Money][tfahm] has a [puzzle][lawley] near the
 beginning where you are given a list of letters that make a sentence. The order
 that you click on the letters determines where they go in the sentence. I think
-of this as 'reverse hangman', because the letters are already
-known. Unfortunately, although [opinions differ][computer-guesses] on
+of this as 'reverse hangman', because the letters are already known.
+Unfortunately, although [opinions differ][computer-guesses] on
 [what exactly][lookup] reverse hangman [is][missing-letters], none of them match
 the game I've just described!
 
