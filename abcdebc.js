@@ -43,7 +43,7 @@ function hangman(answer) { return abcdebc(answer, false); }
 function encrypt(password, text, params) {
     var decrypted = sjcl.json.decode(sjcl.encrypt(password, text, params));
 
-    return sjcl.codec.base64.fromBits(decrypted['ct'], 1);
+    return sjcl.codec.base64.fromBits(decrypted.ct, 1);
 }
 
 function decrypt(password, text, params) {
