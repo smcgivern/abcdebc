@@ -40,3 +40,7 @@ test('decrypt()', function() {
 test('encrypt()', function() {
     equal('wc1R0lOf7kJ0uSGec0sd', encrypt(sjclPassword, 'Hangman', sjclParams));
 });
+
+test('remainingLetters()', function() {
+    equal('adgltvyz', remainingLetters('The quick brown fox jumps').join(''));
+});
