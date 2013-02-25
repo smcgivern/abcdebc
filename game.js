@@ -1,10 +1,15 @@
-var demoGames = [
-    'wc1R0lOf7kJ0uSGec0sd',
-    '3dtQV75n84jCUDBpxYAyL6RqpRxjVyIRntwxo4WzpM0Fph055N9URblu',
-    '3cRalU+L6cvKHz9ry5klI+JxtU5sR63hdI9+tMCi9tYap/lbZ7LTeiToE/ZM9pkX9LBh'
-];
+var sounds = {},
+    demoGames = [
+        'wc1R0lOf7kJ0uSGec0sd',
+        '3dtQV75n84jCUDBpxYAyL6RqpRxjVyIRntwxo4WzpM0Fph055N9URblu',
+        '3cRalU+L6cvKHz9ry5klI+JxtU5sR63hdI9+tMCi9tYap/lbZ7LTeiToE/ZM9pkX9LBh'
+    ];
 
 function init() {
+    ['letter', 'won', 'lost'].forEach(function(sound) {
+        sounds[sound] = new Audio(sound + '.wav');
+    });
+
     demoGames.forEach(function(demoGame, i) {
         var parent = document.getElementById('demo-games'),
             link = document.createElement('span');
@@ -59,6 +64,8 @@ function load(encryptedAnswer, password, params) {
 }
 
 function endGame(result) {
+    playSound(result);
+
     document.getElementById(result + '-game').className = '';
 
     toLetters(function(element) { element.onclick = null; });
@@ -83,6 +90,8 @@ function play(answer, guess) {
         return (result === answer) ? endGame('won') : endGame('lost');
     }
 
+    if (guess.length > 0 ) { playSound('letter'); }
+
     toLetters(function(element, letter) {
         if (uniques.indexOf(letter) === -1) {
             element.onclick = function() {
@@ -95,6 +104,12 @@ function play(answer, guess) {
     });
 
     return result;
+}
+
+function playSound(sound) {
+    if (document.getElementById('play-sounds').checked) {
+        sounds[sound].play();
+    }
 }
 
 function toLetters(func) {
